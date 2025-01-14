@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right,orange, purple);
+  overflow: hidden;
+
+}
+
+.container {
+  position: relative;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* border-radius: 20px; */
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to right, #f3904f, #ff6f61);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card.hidden {
+  transform: translateY(150%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.card.top {
+  transform: translateY(-120%) scale(0.85);
+  filter: blur(2px);
+  opacity: 1;
+  z-index: 0;
+}
+
+.card.center {
+  transform: translateY(0) scale(1.1);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.card.bottom {
+  transform: translateY(120%) scale(0.85);
+  filter: blur(4px);
+  opacity: 1;
+  z-index: 0;
+}
+
+.card_css {
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  flex-direction: column;
+}
+
+.up_box {
+  width: 25vw;
+  height: 15vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.down_box {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+}
+
+.circle {
+  width: 4vw;
+  height: 7vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.extra_boxes {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.extra_boxes .b1 {
+  width: 100%;
+  height: 4vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.extra_boxes .b2 {
+  width: 60%;
+  height: 2vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
